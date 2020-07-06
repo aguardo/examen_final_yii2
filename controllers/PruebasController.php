@@ -33,5 +33,22 @@ class PruebasController extends \yii\web\Controller
         
         
     }
+    
+    public function actionCuatro(){
+        
+        $Cadena = new \app\components\Cadena("ejemplo de camión");
+        
+        $texto = $Cadena->getNombre();
+        $numero = $Cadena->getVocales();
+        $longitud = $Cadena->getLongitud();
+        
+        return $this->render('cuatro',[
+            'texto' => $texto,
+            'numero' => $numero,
+            'longitud' => $longitud,
+        ]);
+        
+        
+    }
 
 }
