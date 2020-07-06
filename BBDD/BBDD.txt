@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS examenFinal;
+
+USE examenFinal;
+
+CREATE TABLE ciudades (
+id INT NOT NULL AUTO_INCREMENT,
+nombre VARCHAR(255),
+habitantes FLOAT,
+escudo VARCHAR(255),
+mapa VARCHAR(255),
+PRIMARY KEY (id)
+)
