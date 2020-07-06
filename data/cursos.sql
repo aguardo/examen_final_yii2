@@ -18,7 +18,7 @@ comenzando TINYINT,
 finalizado TINYINT,
 
 PRIMARY KEY (codigoCurso)
-)
+);
 
 CREATE TABLE IF NOT EXISTS inscripciones (
 id INT NOT NULL AUTO_INCREMENT,

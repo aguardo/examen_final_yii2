@@ -38,21 +38,13 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
+            ['label' => 'Destacados', 'url' => ['/site/index']],
+            ['label' => 'Comienzo inmimente', 'url' => ['/site/comienzo']],
+            ['label' => 'Todos', 'url' => ['/site/todos']],
+            ['label' => 'Buscar', 'url' => ['/site/buscador']],
+            ['label' => 'Solicitar información', 'url' => ['/site/informacion']],
+            
+            
         ],
     ]);
     NavBar::end();
@@ -68,11 +60,28 @@ AppAsset::register($this);
 </div>
 
 <footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
+    <?php
+    NavBar::begin([
+        'brandImage' => '@web/imgs/alpe.png',
+        'brandUrl' => "https://www.alpeformacion.es",
+        'options' => [
+            'class' => 'navbar-inverse .navbar-fixed-bottom',
+        ],
+    ]);
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'items' => [
+            ['label' => 'Portal educativo', 'url' => "http://educa.alpeformacion.es"],
+            ['label' => 'Wweb Alpe', 'url' => "https:/www.alpeformacion.es"],
+            ['label' => 'Donde estamos', 'url' => "https://www.alpeformacion.es/contacto"],
+            ['label' => 'Datos de Contacto', 'url' => "https://www.alpeformacion.es/contacto"],
+            
+            
+            
+        ],
+    ]);
+    NavBar::end();
+    ?>
 </footer>
 
 <?php $this->endBody() ?>
