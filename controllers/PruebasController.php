@@ -22,5 +22,12 @@ class PruebasController extends \yii\web\Controller
         })();
             
     }
+    
+    public function actionTres(){
+        
+        return $this->render('tres');
+        
+        
+    }
 
 }
