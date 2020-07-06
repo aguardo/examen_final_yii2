@@ -12,7 +12,7 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     
-    'name'=> 'Examen_Final_Yii2',
+    'name'=> 'Examen Final Yii2',
     'language' => 'es',
     'components' => [
         'request' => [

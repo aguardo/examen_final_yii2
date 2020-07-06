@@ -4,6 +4,10 @@ namespace app\controllers;
 
 class PruebasController extends \yii\web\Controller
 {
+    
+    public $layout = 'second';
+    
+    
     public function actionUno()
     {
         return "Hola Mundo";
